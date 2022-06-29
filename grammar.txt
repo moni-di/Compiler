@@ -1,0 +1,95 @@
+program otherfunctions mainfunction
+otherfunctions function otherfunctions
+parameter_list datatype TK_ID remaining_list
+datatype primitivedatatype
+datatype constructeddatatype
+stmts typedefinitions declarations otherstmts returnstmt
+typedefinitions actualorredefined typedefinitions
+actualorredefined definetypestmt
+actualorredefined typedefinition
+fielddefinitions fielddefinition fielddefinition morefields
+fieldtype primitivedatatype
+morefields fielddefinition morefields
+termprime highprecedenceoperator factor termprime
+expprime lowprecedenceoperators term expprime
+moreexpansions oneexpansion moreexpansions
+option_single_constructed oneexpansion moreexpansions
+otherstmts stmt otherstmts
+stmt funcallstmt
+funcallstmt outputparameters TK_CALL TK_FUNID TK_WITH TK_PARAMETERS inputparameters TK_SEM
+declarations declaration declarations
+stmt assignmentstmt
+stmt iterativestmt
+stmt conditionalstmt
+stmt iostmt
+assignmentstmt singleorrecid TK_ASSIGNOP arithmeticexpression TK_SEM
+arithmeticexpression term expprime
+term factor termprime
+factor var
+booleanexpression var relationalop var
+var singleorrecid
+factor TK_OP arithmeticexpression TK_CL
+highprecedenceoperator TK_MUL
+highprecedenceoperator TK_DIV
+lowprecedenceoperators TK_PLUS
+lowprecedenceoperators TK_MINUS
+booleanexpression TK_OP booleanexpression TK_CL logicalop TK_OP booleanexpression TK_CL
+booleanexpression TK_NOT TK_OP booleanexpression TK_CL
+var TK_NUM
+var TK_RNUM
+logicalop TK_AND
+logicalop TK_OR
+relationalop TK_LT
+relationalop TK_LE
+relationalop TK_EQ
+relationalop TK_GT
+relationalop TK_GE
+relationalop TK_NE
+returnstmt TK_RETURN optionalreturn TK_SEM
+optionalreturn TK_SQL idlist TK_SQR
+idlist TK_ID more_ids
+more_ids TK_COMMA idlist
+primitivedatatype TK_INT
+primitivedatatype TK_REAL
+constructeddatatype TK_RECORD TK_RUID
+constructeddatatype TK_UNION TK_RUID
+constructeddatatype TK_RUID
+remaining_list TK_COMMA parameter_list
+singleorrecid TK_ID option_single_constructed
+oneexpansion TK_DOT TK_FIELDID
+outputparameters TK_SQL idlist TK_SQR TK_ASSIGNOP
+inputparameters TK_SQL idlist TK_SQR
+iterativestmt TK_WHILE TK_OP booleanexpression TK_CL stmt otherstmts TK_ENDWHILE
+conditionalstmt TK_IF TK_OP booleanexpression TK_CL TK_THEN stmt otherstmts elsepart
+elsepart TK_ELSE stmt otherstmts TK_ENDIF
+elsepart TK_ENDIF
+iostmt TK_READ TK_OP var TK_CL TK_SEM
+iostmt TK_WRITE TK_OP var TK_CL TK_SEM
+typedefinition TK_RECORD TK_RUID fielddefinitions TK_ENDRECORD
+typedefinition TK_UNION TK_RUID fielddefinitions TK_ENDUNION
+fielddefinition TK_TYPE fieldtype TK_COLON TK_FIELDID TK_SEM
+fieldtype TK_RUID
+declaration TK_TYPE datatype TK_COLON TK_ID global_or_not TK_SEM
+global_or_not TK_COLON TK_GLOBAL
+mainfunction TK_MAIN stmts TK_END
+function TK_FUNID input_par output_par TK_SEM stmts TK_END
+input_par TK_INPUT TK_PARAMETER TK_LIST TK_SQL parameter_list TK_SQR
+output_par TK_OUTPUT TK_PARAMETER TK_LIST TK_SQL parameter_list TK_SQR
+a TK_RECORD
+a TK_UNION
+definetypestmt TK_DEFINETYPE a TK_RUID TK_AS TK_RUID
+otherfunctions EPSILON
+output_par EPSILON
+optionalreturn EPSILON
+more_ids EPSILON
+expprime EPSILON
+termprime EPSILON
+remaining_list EPSILON
+typedefinitions EPSILON
+morefields EPSILON
+declarations EPSILON
+global_or_not EPSILON
+otherstmts EPSILON
+option_single_constructed EPSILON
+outputparameters EPSILON
+moreexpansions EPSILON
